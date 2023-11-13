@@ -4,13 +4,17 @@ import { Table, Button } from 'react-bootstrap';
 import MeoMeoJs from '@mieuteacher/meomeojs'
 import { doListAction } from './store/slices/dolist.slice';
 import {Modal} from 'antd'
+import Promise from './components/Promise';
+import Api from './components/Api';
 export default function App() {
   const dispatch = useDispatch()
   const doListStore = useSelector(state => state.doListStore);
 
+
+
   return (
     <div>
-      <h1>Do List</h1>
+      {/* <h1>Do List</h1>
       <Button onClick={() => {
           Modal.confirm({
             title: 'Are you sure delete this item?',
@@ -68,6 +72,8 @@ export default function App() {
           }
         </tbody>
       </Table>
+      <Promise/> */}
+      <Api/>
     </div>
   )
 }
